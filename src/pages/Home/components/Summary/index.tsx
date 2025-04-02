@@ -11,30 +11,30 @@ export function Summary() {
 
   return (
     <SummaryContainer>
-      <img src="../src/assets/avatar.JPG" />
+      <img src="../src/assets/avatar.png" />
       <section>
         <SummaryHeader>
-          <h1>Lucas Pedro</h1>
+          <h1>Adeuvaldo Neto Fernandes Paiva</h1>
           <a href="#" target="_blank">
             GITHUB
             <ArrowUpRight size={12} />
           </a>
         </SummaryHeader>
-        <p>Software Engineering. developer at NodeJS, ReactJS, React Native, Electron.</p>
+        <p>Software Engineering</p>
         <SummaryAnchors>
           <div>
             <GithubLogo size={18} />
-            <span>lucaspedronet</span>
+            <span>NettoZk</span>
           </div>
 
           <div>
             <Buildings size={18} />
-            <span>Paraná Banco</span>
+            <span>Brasil Banco</span>
           </div>
 
           <div>
             <Users size={18} />
-            <span>47</span>
+            <span>100000</span>
           </div>
         </SummaryAnchors>
       </section>

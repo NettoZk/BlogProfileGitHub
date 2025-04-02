@@ -1,15 +1,25 @@
-// import { dateFormatter } from "../../../../utils/formatter";
 import { IssuesContainer, StyledNavLink } from "./styles";
 
-export function Issues() {
+// Definição do tipo para as issues
+interface IssueProps {
+  issue: {
+    id: number;
+    number: number;
+    title: string;
+    body: string | null;
+    created_at: string;
+  };
+}
+
+export function Issues({ issue }: IssueProps) {
   return (
     <IssuesContainer>
-      <StyledNavLink to="/issue">
+      <StyledNavLink to={`/issue/${issue.number}`}>
         <div>
-          <h2>Exemplo de issue</h2>
-          <span>20/03/2025</span>
+          <h2>{issue.title}</h2>
+          <span>{new Date(issue.created_at).toLocaleDateString()}</span>
         </div>
-        <p>body</p>
+        <p>{issue.body || "Sem descrição"}</p>
       </StyledNavLink>
     </IssuesContainer>
   );
